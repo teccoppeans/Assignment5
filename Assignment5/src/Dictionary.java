@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class Dictionary {
+public class Dictionary implements Serializable {
 	
 	private BST<Entry> dictionary;
 	private String name;
@@ -27,10 +27,6 @@ public class Dictionary {
 	
 	public void setName(String name) {
 		this.name = name;
-	}
-	
-	public void readObject() {
-		
 	}
 	
 	public void search(String word) {

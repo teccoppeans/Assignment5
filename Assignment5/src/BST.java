@@ -1,5 +1,7 @@
+import java.io.Serializable;
 
-public class BST<T extends Comparable<T>> implements BSTInterface<T>{
+
+public class BST<T extends Comparable<T>> implements BSTInterface<T>, Serializable{
 
 	protected BSTNode<T> root;
 	protected boolean found;

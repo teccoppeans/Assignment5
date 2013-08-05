@@ -1,6 +1,8 @@
+import java.io.Serializable;
 
 
-public class Entry implements Comparable<Entry> {
+
+public class Entry implements Comparable<Entry>, Serializable {
 		
 	private String word;
 	private String definition;

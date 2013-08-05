@@ -14,21 +14,21 @@ public class Main {
 		String dictionaryName = "testDictionary";
 		Dictionary dic;
 		
-//		try {
-//			try {
-//				dic = writer.readObjFile(dictionaryName);
-//			} catch (ClassNotFoundException e) {
-//				// TODO Auto-generated catch block
-//				dic = new Dictionary(dictionaryName);
-//			}
-//		} catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			dic = new Dictionary(dictionaryName);
-//		}
+		try {
+			try {
+				dic = writer.readObjFile(dictionaryName);
+				
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				dic = new Dictionary(dictionaryName);
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			dic = new Dictionary(dictionaryName);
+		}
 		
-		//writer = new ObjectWriter<Dictionary>(dic, dic.getName());
+		writer = new ObjectWriter<Dictionary>(dic, dic.getName());
 		
-		dic = new Dictionary(dictionaryName);
 		Scanner reader;
 		
 		System.out.println("Dictionary loaded.");
@@ -38,7 +38,7 @@ public class Main {
 			String input = "";
 			input = reader.nextLine();
 			if ("exit".equalsIgnoreCase(input.trim())) {
-				//writer.writeObjFile();
+				writer.writeObjFile();
 				break;
 			}
 			else {

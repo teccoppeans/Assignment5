@@ -1,6 +1,8 @@
+import java.io.Serializable;
 
 
-public class BSTNode<T extends Comparable<T>> {
+
+public class BSTNode<T extends Comparable<T>> implements Serializable {
 	protected T data;
 	protected BSTNode<T> left;
 	protected BSTNode<T> right;
